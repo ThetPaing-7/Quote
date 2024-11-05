@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --background-Color:red;
+    --card-Color:blue;
+}
+
+svg{
+    width: 50px;
+    height: 30px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.card{
+    width: 50%;
+    height: 40%;
+    margin-top: 100px;
+    background-color: var(--background-Color);
+}
+
+.cardHeading{
+    text-align: center;
+}
+
+.buttonGp{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.copyGp,
+.generateGp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
