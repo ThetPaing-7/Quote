@@ -1,13 +1,33 @@
 
-setQuote();
+document.getElementById("generate").addEventListener("click", () => {
+    setQuote();
+})
 
-function setQuote(x){
-    x = generateQuote();
+document.getElementById("copy").addEventListener("click", ()  => {
+    copy();
+})
+
+function copy() {
+    const text = document.querySelector("#quote").textContent;
+
+    // Use the Clipboard API to copy the text
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Text copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy text: ", err);
+    });
+}
+
+
+function setQuote(){
+    let x = generateQuote();
     let get = x.getQuote();
     let author = get.authors;
-    let quote = get.quotes;
-    console.log(author)
-    console.log(quote)
+    let quote = get.quotes; 
+    document.querySelector("#author").textContent = author;
+    document.querySelector("#quote").textContent = quote;
+
+    
 }
 
 function generateQuote() {
@@ -92,6 +112,7 @@ function generateQuote() {
             quotes: "The journey of a thousand miles begins with one step.",
             authors: "Lao Tzu",
         },
+
     ];
 
     return{

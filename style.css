@@ -4,9 +4,19 @@
     margin: 0;
 }
 
+/* .itim-regular {
+  font-family: "Itim", serif;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
 :root{
-    --background-Color:red;
-    --card-Color:blue;
+    --background-Color:#000000;
+    --heading-font:"Itim", serif;
+    --authr-color:#2563eb;
+    --quote-color:#f0fdf4;
+
 }
 
 svg{
@@ -15,6 +25,7 @@ svg{
 }
 
 body{
+    background-color:#172554;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -23,19 +34,55 @@ body{
 
 .card{
     width: 50%;
-    height: 40%;
+    height: 50%;
     margin-top: 100px;
     background-color: var(--background-Color);
+    position: relative;
+    border-radius: 30px;
+    border: 2px solid rgb(109 40 217);
+    box-shadow: 0px 0px 8px rgb(109 40 217);
+}
+
+hr{
+    width: 70%;
+    margin: 0.5rem auto;
+}
+
+#quote{
+    margin:20px;
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    font-family: var(--heading-font);
+    color: var(--quote-color);
+}
+
+#author{
+    margin: 10px;
+    text-align: center;
+    font-size: var(--heading-font);
+    color: var(--authr-color);
 }
 
 .cardHeading{
     text-align: center;
+    color: var(--authr-color);
+}
+
+.cardHeading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 2rem;
 }
 
 .buttonGp{
+    position:absolute;
     display: flex;
     justify-content: center;
     gap: 30px;
+    bottom: 20px;
+    left: 50%;
+   transform: translate(-50%, -50%) 
 }
 
 .copyGp,
@@ -43,4 +90,41 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+#copy,
+#generate {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#copy:hover{
+    background-color: #c11b5b;
+}
+
+#generate:hover{
+    background-color: #c11b5b;
 }
